@@ -16,16 +16,16 @@ import fishcatalog.controller.BeanConfiguration;
 import fishcatalog.repository.FishRepository;
 
 @SpringBootApplication
-public class SpringFishCatalogApplication implements CommandLineRunner {
+public class SpringFishCatalogApplication {
 
-	@Autowired
-	FishRepository repo;
+	/*@Autowired
+	FishRepository repo;*/
 	
 	public static void main(String[] args) {
 		SpringApplication.run(SpringFishCatalogApplication.class, args);
 	}
 	
-	public void run(String... args) throws Exception{
+	/*public void run(String... args) throws Exception{
 		
 		ApplicationContext appContext = new AnnotationConfigApplicationContext(BeanConfiguration.class);
 		
@@ -45,6 +45,6 @@ public class SpringFishCatalogApplication implements CommandLineRunner {
 		}
 		
 		((AbstractApplicationContext) appContext).close();
-	}
+	} */
 
 }

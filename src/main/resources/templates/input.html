@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Create a new entery</title>
+</head>
+<body>
+	<form th:object="${newFish}" th:action="@{/update/{id}(id =${newFish.id})}" method='POST'>
+	Fish Name: <input name="name" size="20" th:field="*{name}"><br />
+	Inches: <input name="inches" size="10" th:field="*{inches}"><br /> 
+	Pounds: <input name="pounds" size="10" th:field="*{pounds}"><br />
+	Location Name: <input name="location.locationName" size="20" th:field="*{location.locationName}"><br />
+	Type of water Body: <input name="location.waterbodyType" size="20" th:field="*{location.waterbodyType}"><br />
+	<input name="submit" type="submit" value="submit" />
+	</form>
+	<a href="viewAll">View all fish enteries</a>
+</body>
+</html>
